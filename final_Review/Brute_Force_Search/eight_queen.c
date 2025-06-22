@@ -1,5 +1,7 @@
 /**
  * 在 8×8 的国际象棋棋盘上，摆放 8 个皇后，要求任意两个皇后不在同一行、同一列或同一对角线上。
+ * 本程序使用穷举法（枚举法）解决八皇后问题。
+ * 通过八重循环枚举所有可能的皇后摆放方式，并用check函数判断是否有冲突。
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -43,17 +45,9 @@ int main(int argc, char const *argv[])
                                     if(check()){
                                         solution_count++;
                                     }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
+            }}}}}}}}  // 八重循环结束  
+  
     //打印最终的解的个数
     printf("Total solutions: %d\n", solution_count);
-    // 返回0表示程序正常结束
     return 0;
 }
